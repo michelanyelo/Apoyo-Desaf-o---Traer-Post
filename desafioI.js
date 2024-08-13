@@ -19,7 +19,7 @@ const listarDatos = (posts) => {
     posts.forEach((post) => {
         const li = document.createElement('li'); // Crear un elemento de lista por cada post
         li.innerHTML = `
-            <h2>${post.title}</h2>
+            <p><b>${post.title}</b></p>
             <p>${post.body}</p>
         `;
         ul.appendChild(li); // Agregar el elemento de lista a la lista desordenada
