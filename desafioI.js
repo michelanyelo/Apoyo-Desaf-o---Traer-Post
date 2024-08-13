@@ -1,5 +1,5 @@
 // Función asíncrona para obtener los datos de la API
-const getPosts = async () => {
+const getData = async () => {
     const url = 'https://jsonplaceholder.typicode.com/posts';
     try {
         const response = await fetch(url);
@@ -29,10 +29,7 @@ const listarDatos = (posts) => {
 };
 
 // Función principal que obtiene los posts y luego los lista
-const mostrarPosts = async () => {
-    const posts = await getPosts(); // Esperar a que los datos sean obtenidos
+const getPosts = async () => {
+    const posts = await getData(); // Esperar a que los datos sean obtenidos
     listarDatos(posts); // Llamar a listarDatos con los datos obtenidos
 }
-
-// Llamada a la función cuando se presiona el botón
-document.querySelector("button").addEventListener("click", mostrarPosts);
