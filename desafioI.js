@@ -28,3 +28,9 @@ const listarDatos = (posts) => {
     postDiv.appendChild(ul); // Agregar la lista desordenada al contenedor en el DOM
 };
 
+// Función principal que obtiene los posts y luego los lista
+const mostrarPosts = async () => {
+    const posts = await getPosts(); // Esperar a que los datos sean obtenidos
+    listarDatos(posts); // Llamar a listarDatos con los datos obtenidos
+}
+
