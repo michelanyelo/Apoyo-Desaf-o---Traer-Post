@@ -10,3 +10,21 @@ const getPosts = async () => {
     }
 }
 
+// Función para listar los datos en el HTML
+const listarDatos = (posts) => {
+    const postDiv = document.getElementById('post-data');
+    postDiv.innerHTML = ''; // Limpiar el contenido anterior
+    const ul = document.createElement('ul'); // Crear la lista desordenada
+
+    posts.forEach((post) => {
+        const li = document.createElement('li'); // Crear un elemento de lista por cada post
+        li.innerHTML = `
+            <h2>${post.title}</h2>
+            <p>${post.body}</p>
+        `;
+        ul.appendChild(li); // Agregar el elemento de lista a la lista desordenada
+    });
+
+    postDiv.appendChild(ul); // Agregar la lista desordenada al contenedor en el DOM
+};
+
