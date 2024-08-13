@@ -34,3 +34,5 @@ const mostrarPosts = async () => {
     listarDatos(posts); // Llamar a listarDatos con los datos obtenidos
 }
 
+// Llamada a la función cuando se presiona el botón
+document.querySelector("button").addEventListener("click", mostrarPosts);
